@@ -248,29 +248,29 @@
             </div>
             
             <div class="reveal-up" style="--delay: 0.2s;">
-                <form class="contact-form" onsubmit="event.preventDefault(); alert('Message sent successfully!');">
+                <form class="contact-form" action="https://formspree.io/f/xzebvegw" method="POST">
                     <h2 style="font-family: var(--font-heading); font-size: clamp(2.5rem, 4vw, 3.5rem); line-height: 1; letter-spacing: 0.02em; margin-bottom: 2rem; color: var(--text-primary);">
                         SEND AN <span style="color: var(--orange-hot);">ENQUIRY</span>
                     </h2>
 
                     <div class="form-group">
                         <label class="form-label" for="name">Full Name</label>
-                        <input type="text" id="name" class="form-input" placeholder="e.g. John Doe" required>
+                        <input type="text" id="name" name="name" class="form-input" placeholder="e.g. John Doe" required>
                     </div>
                     
                     <div class="form-group">
                         <label class="form-label" for="email">Email Address</label>
-                        <input type="email" id="email" class="form-input" placeholder="e.g. john@example.com" required>
+                        <input type="email" id="email" name="email" class="form-input" placeholder="e.g. john@example.com" required>
                     </div>
                     
                     <div class="form-group">
                         <label class="form-label" for="phone">Phone Number (Optional)</label>
-                        <input type="tel" id="phone" class="form-input" placeholder="e.g. 055 XXX XXXX">
+                        <input type="tel" id="phone" name="phone" class="form-input" placeholder="e.g. 055 XXX XXXX">
                     </div>
                     
                     <div class="form-group">
                         <label class="form-label" for="message">Your Enquiry</label>
-                        <textarea id="message" class="form-input" placeholder="Tell us about your requirements..." required></textarea>
+                        <textarea id="message" name="message" class="form-input" placeholder="Tell us about your requirements..." required></textarea>
                     </div>
                     
                     <button type="submit" class="submit-btn">
