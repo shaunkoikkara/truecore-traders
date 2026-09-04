@@ -248,7 +248,10 @@
             </div>
             
             <div class="reveal-up" style="--delay: 0.2s;">
-                <form class="contact-form" action="https://formspree.io/f/xzebvegw" method="POST">
+                <form class="contact-form" id="contactForm" action="https://formspree.io/f/xzebvegw" method="POST">
+                    <!-- Formspree Custom Subject -->
+                    <input type="hidden" name="_subject" value="New Enquiry from TrueCore Website!">
+                    
                     <h2 style="font-family: var(--font-heading); font-size: clamp(2.5rem, 4vw, 3.5rem); line-height: 1; letter-spacing: 0.02em; margin-bottom: 2rem; color: var(--text-primary);">
                         SEND AN <span style="color: var(--orange-hot);">ENQUIRY</span>
                     </h2>
@@ -273,13 +276,14 @@
                         <textarea id="message" name="message" class="form-input" placeholder="Tell us about your requirements..." required></textarea>
                     </div>
                     
-                    <button type="submit" class="submit-btn">
+                    <button type="submit" class="submit-btn" id="submitBtn">
                         <span>SEND MESSAGE</span>
                         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                             <line x1="22" y1="2" x2="11" y2="13"></line>
                             <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
                         </svg>
                     </button>
+                    <div id="formStatus" style="margin-top: 1rem; font-weight: 600; text-align: center; display: none;"></div>
                 </form>
             </div>
             
@@ -377,6 +381,51 @@
                 document.querySelector('.hero-watermark')?.classList.add('visible');
             }, 400);
         });
+        // ===== FORMSPREE AJAX SUBMISSION =====
+        const contactForm = document.getElementById('contactForm');
+        const formStatus = document.getElementById('formStatus');
+        const submitBtn = document.getElementById('submitBtn');
+
+        if (contactForm) {
+            contactForm.addEventListener('submit', async function(e) {
+                e.preventDefault();
+                
+                // Change button state
+                const originalBtnHtml = submitBtn.innerHTML;
+                submitBtn.innerHTML = '<span>SENDING...</span>';
+                submitBtn.style.opacity = '0.7';
+                submitBtn.style.pointerEvents = 'none';
+
+                const data = new FormData(contactForm);
+                
+                try {
+                    const response = await fetch(contactForm.action, {
+                        method: contactForm.method,
+                        body: data,
+                        headers: {
+                            'Accept': 'application/json'
+                        }
+                    });
+                    
+                    if (response.ok) {
+                        formStatus.innerHTML = '<span style="color: #16a34a;">✅ Message sent successfully! We will get back to you shortly.</span>';
+                        formStatus.style.display = 'block';
+                        contactForm.reset();
+                    } else {
+                        formStatus.innerHTML = '<span style="color: #dc2626;">❌ Oops! There was a problem submitting your form.</span>';
+                        formStatus.style.display = 'block';
+                    }
+                } catch (error) {
+                    formStatus.innerHTML = '<span style="color: #dc2626;">❌ Oops! There was a network error. Please try again.</span>';
+                    formStatus.style.display = 'block';
+                }
+                
+                // Restore button
+                submitBtn.innerHTML = originalBtnHtml;
+                submitBtn.style.opacity = '1';
+                submitBtn.style.pointerEvents = 'auto';
+            });
+        }
     </script>
     <!-- WhatsApp Sticky Button -->
     <a href="https://wa.me/966550083728" class="whatsapp-sticky" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
