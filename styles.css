@@ -887,6 +887,8 @@ body {
     display: flex;
     flex-direction: column;
     gap: 1.25rem;
+    text-decoration: none;
+    color: inherit;
 }
 
 .service-card:hover {

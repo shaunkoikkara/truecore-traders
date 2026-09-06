@@ -145,17 +145,17 @@
     <!-- Navigation -->
     <nav class="navbar" id="navbar" aria-label="Main navigation">
         <div class="nav-logo">
-            <a href="index.html" style="text-decoration: none; display: flex; align-items: center;">
+            <a href="/" style="text-decoration: none; display: flex; align-items: center;">
                 <img src="logo.png" alt="TrueCore Logo" class="nav-logo-image">
             </a>
         </div>
         <ul class="nav-links" id="navLinks">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="services.html" class="active">Services</a></li>
-            <li><a href="contact.html">Contact</a></li>
+            <li><a href="/">Home</a></li>
+            <li><a href="/about">About</a></li>
+            <li><a href="/services" class="active">Services</a></li>
+            <li><a href="/contact">Contact</a></li>
         </ul>
-        <a href="contact.html" class="nav-cta" id="btnQuote">
+        <a href="/contact" class="nav-cta" id="btnQuote">
             <span>GET A QUOTE</span>
             <span class="nav-cta-arrow">
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"
@@ -201,37 +201,186 @@
 
             <div class="services-grid">
 
-                <!-- Product Categories -->
-                <div class="service-card-lg reveal-up" style="--delay: 0.1s;">
-                    <h3>Product Categories</h3>
-                    <ul class="custom-list">
-                        <li>Safety Equipment</li>
-                        <li>Power & Hand Tools</li>
-                        <li>Electrical Items</li>
-                        <li>Civil & Mechanical Materials</li>
-                        <li>Lifting Equipment</li>
-                        <li>Testing Instruments</li>
-                        <li>Welding Tools & Supplies</li>
-                        <li>Fasteners & Hardware</li>
-                        <li>Lighting Fixtures</li>
-                        <li>Furniture & Plumbing Materials</li>
-                        <li>Cleaning & Maintenance Supplies</li>
-                        <li>Office Supplies</li>
-                        <li>Scaffolding & Access Systems</li>
-                    </ul>
+                <!-- 1. Safety Equipment -->
+                <div class="service-card reveal-up" id="safety-equipment" style="--delay: 0s;">
+                    <div class="service-image-box">
+                        <img src="supply-safety-gear.webp" alt="Safety Equipment & Gear" class="service-img" loading="lazy">
+                        <span class="service-badge">01</span>
+                    </div>
+                    <div class="service-content">
+                        <h3>Safety Equipment & Gear</h3>
+                        <p>We supply personal protective equipment and workplace safety gear for construction and industrial sites across Saudi Arabia, including safety helmets, high-visibility vests, safety glasses, cut-resistant gloves, steel-toe safety boots, fall protection harnesses, and safety signage.</p>
+                    </div>
+                    <div class="service-card-line"></div>
                 </div>
 
-                <!-- Our Services -->
-                <div class="service-card-lg reveal-up" style="--delay: 0.2s;">
-                    <h3>Our Services</h3>
-                    <ul class="custom-list">
-                        <li>Reliable sourcing and supply of high-quality materials</li>
-                        <li>Timely delivery to project sites across the Kingdom</li>
-                        <li>Bulk order handling and custom procurement support</li>
-                        <li>Customer-focused service with prompt communication</li>
-                    </ul>
+                <!-- 2. Power & Hand Tools -->
+                <div class="service-card reveal-up" id="power-hand-tools" style="--delay: 0.1s;">
+                    <div class="service-image-box">
+                        <img src="supply-power-tools.webp" alt="Power & Hand Tools" class="service-img" loading="lazy">
+                        <span class="service-badge">02</span>
+                    </div>
+                    <div class="service-content">
+                        <h3>Power & Hand Tools</h3>
+                        <p>Our hand tools are built for daily use on construction and industrial sites, including adjustable spanners, combination wrench sets, screwdriver sets, utility knives, measuring tapes, pliers, and hammers.</p>
+                    </div>
+                    <div class="service-card-line"></div>
                 </div>
 
+                <!-- 3. Electrical Items -->
+                <div class="service-card reveal-up" id="electrical-items" style="--delay: 0.2s;">
+                    <div class="service-image-box">
+                        <img src="supply-electrical-items.webp" alt="Electrical Items" class="service-img" loading="lazy">
+                        <span class="service-badge">03</span>
+                    </div>
+                    <div class="service-content">
+                        <h3>Electrical Items</h3>
+                        <p>We supply electrical materials and components for new installations and maintenance work, including cables, switches, circuit breakers, conduit fittings, and junction boxes.</p>
+                    </div>
+                    <div class="service-card-line"></div>
+                </div>
+
+                <!-- 4. Civil & Mechanical Materials -->
+                <div class="service-card reveal-up" id="civil-mechanical-materials" style="--delay: 0.3s;">
+                    <div class="service-image-box">
+                        <img src="supply-civil-materials.webp" alt="Civil & Mechanical Materials" class="service-img" loading="lazy">
+                        <span class="service-badge">04</span>
+                    </div>
+                    <div class="service-content">
+                        <h3>Civil & Mechanical Materials</h3>
+                        <p>We provide a broad range of civil and mechanical construction materials, supporting project needs from groundwork through structural and mechanical installation across contractor and engineering projects.</p>
+                    </div>
+                    <div class="service-card-line"></div>
+                </div>
+
+                <!-- 5. Lifting Equipment -->
+                <div class="service-card reveal-up" id="lifting-equipment" style="--delay: 0.4s;">
+                    <div class="service-image-box">
+                        <img src="supply-lifting-gear.webp" alt="Lifting Equipment" class="service-img" loading="lazy">
+                        <span class="service-badge">05</span>
+                    </div>
+                    <div class="service-content">
+                        <h3>Lifting Equipment</h3>
+                        <p>Our lifting gear supports safe material handling on construction and industrial sites, including slings, shackles, chain blocks, wire rope, and rigging accessories.</p>
+                    </div>
+                    <div class="service-card-line"></div>
+                </div>
+
+                <!-- 6. Testing Instruments -->
+                <div class="service-card reveal-up" id="testing-instruments" style="--delay: 0.5s;">
+                    <div class="service-image-box">
+                        <img src="supply-testing.webp" alt="Testing Instruments" class="service-img" loading="lazy">
+                        <span class="service-badge">06</span>
+                    </div>
+                    <div class="service-content">
+                        <h3>Testing Instruments</h3>
+                        <p>We supply test and measurement instruments for quality control, inspection, and compliance checks on industrial and construction projects, including multimeters, pressure gauges, and calibration tools.</p>
+                    </div>
+                    <div class="service-card-line"></div>
+                </div>
+
+                <!-- 7. Welding Tools & Supplies -->
+                <div class="service-card reveal-up" id="welding-tools" style="--delay: 0.6s;">
+                    <div class="service-image-box">
+                        <img src="supply-welding-equipment.webp" alt="Welding Tools & Supplies" class="service-img" loading="lazy">
+                        <span class="service-badge">07</span>
+                    </div>
+                    <div class="service-content">
+                        <h3>Welding Tools & Supplies</h3>
+                        <p>Our welding and construction tools support fabrication and site work, including auto-darkening welding helmets, leather welding gloves, welding torch sets, paint rollers, plaster scrapers, and heavy-duty hand shovels.</p>
+                    </div>
+                    <div class="service-card-line"></div>
+                </div>
+
+                <!-- 8. Fasteners & Hardware -->
+                <div class="service-card reveal-up" id="fasteners-hardware" style="--delay: 0.7s;">
+                    <div class="service-image-box">
+                        <img src="supply-fasteners.webp" alt="Fasteners & Hardware" class="service-img" loading="lazy">
+                        <span class="service-badge">08</span>
+                    </div>
+                    <div class="service-content">
+                        <h3>Fasteners & Hardware</h3>
+                        <p>We stock a full range of fasteners and hardware for construction and industrial applications, including bolts, nuts, screws, washers, and anchors, in stock for fast project turnaround.</p>
+                    </div>
+                    <div class="service-card-line"></div>
+                </div>
+
+                <!-- 9. Lighting Fixtures -->
+                <div class="service-card reveal-up" id="lighting-fixtures" style="--delay: 0.8s;">
+                    <div class="service-image-box">
+                        <img src="supply-lighting.webp" alt="Lighting Fixtures" class="service-img" loading="lazy">
+                        <span class="service-badge">09</span>
+                    </div>
+                    <div class="service-content">
+                        <h3>Lighting Fixtures</h3>
+                        <p>We supply industrial and commercial lighting fixtures suited to construction sites, warehouses, and facility installations, including LED floodlights, industrial high-bay lights, and site lighting.</p>
+                    </div>
+                    <div class="service-card-line"></div>
+                </div>
+
+                <!-- 10. Furniture & Plumbing Materials -->
+                <div class="service-card reveal-up" id="furniture-plumbing" style="--delay: 0.9s;">
+                    <div class="service-image-box">
+                        <img src="supply-furniture.webp" alt="Furniture & Plumbing Materials" class="service-img" loading="lazy">
+                        <span class="service-badge">10</span>
+                    </div>
+                    <div class="service-content">
+                        <h3>Furniture & Plumbing Materials</h3>
+                        <p>Our furniture and plumbing supplies support commercial and industrial facility fit-outs and renovations, including pipes, fittings, valves, and site furniture.</p>
+                    </div>
+                    <div class="service-card-line"></div>
+                </div>
+
+                <!-- 11. Cleaning & Maintenance Supplies -->
+                <div class="service-card reveal-up" id="cleaning-maintenance" style="--delay: 1.0s;">
+                    <div class="service-image-box">
+                        <img src="supply-cleaning.webp" alt="Cleaning & Maintenance Supplies" class="service-img" loading="lazy">
+                        <span class="service-badge">11</span>
+                    </div>
+                    <div class="service-content">
+                        <h3>Cleaning & Maintenance Supplies</h3>
+                        <p>We provide cleaning and janitorial supplies for industrial sites, warehouses, and commercial premises, including mop buckets with wringers, microfiber cleaning cloths, floor squeegees, disinfectant solutions, cleaning trolleys, and heavy-duty garbage bags.</p>
+                    </div>
+                    <div class="service-card-line"></div>
+                </div>
+
+                <!-- 12. Office Supplies -->
+                <div class="service-card reveal-up" id="office-supplies" style="--delay: 1.1s;">
+                    <div class="service-image-box">
+                        <img src="supply-office.webp" alt="Office Supplies" class="service-img" loading="lazy">
+                        <span class="service-badge">12</span>
+                    </div>
+                    <div class="service-content">
+                        <h3>Office Supplies</h3>
+                        <p>We supply office stationery and supplies for site offices and administrative operations, including A4 paper reams, staplers, file folders, desk organizers, notepads, and scissors & cutters.</p>
+                    </div>
+                    <div class="service-card-line"></div>
+                </div>
+
+                <!-- 13. Scaffolding & Access Systems -->
+                <div class="service-card reveal-up" id="scaffolding-access" style="--delay: 1.2s;">
+                    <div class="service-image-box">
+                        <img src="supply-scaffolding.webp" alt="Scaffolding & Access Systems" class="service-img" loading="lazy">
+                        <span class="service-badge">13</span>
+                    </div>
+                    <div class="service-content">
+                        <h3>Scaffolding & Access Systems</h3>
+                        <p>Our scaffolding and access equipment supports safe working at height on construction and industrial sites, including scaffold frames, planks, ladders, and guardrails.</p>
+                    </div>
+                    <div class="service-card-line"></div>
+                </div>
+
+            </div>
+
+            <!-- Our Services -->
+            <div class="service-card-lg reveal-up" style="--delay: 0.2s; margin-top: 4rem;">
+                <h3 style="text-align: center; margin-bottom: 2rem;">Our Services</h3>
+                <ul class="custom-list">
+                    <li>Reliable sourcing and supply of high-quality materials</li>
+                    <li>Timely delivery to project sites across the Kingdom</li>
+                    <li>Bulk order handling and custom procurement support</li>
+                    <li>Customer-focused service with prompt communication</li>
+                </ul>
             </div>
 
         </div>
@@ -251,10 +400,10 @@
             <div class="footer-col">
                 <h4>Quick Links</h4>
                 <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About Us</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="contact.html">Contact Us</a></li>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/about">About Us</a></li>
+                    <li><a href="/services">Services</a></li>
+                    <li><a href="/contact">Contact Us</a></li>
                 </ul>
             </div>
 
@@ -280,7 +429,7 @@
                             <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
                             <polyline points="22,6 12,13 2,6" />
                         </svg>
-                        <a href="mailto:info@truecoretraders.com">info@truecoretraders.com</a>
+                        <a href="/contact">info@truecoretraders.com</a>
                     </li>
                 </ul>
             </div>
