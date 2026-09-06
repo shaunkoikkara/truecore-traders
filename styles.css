@@ -898,7 +898,7 @@ body {
 .service-image-box {
     position: relative;
     width: 100%;
-    height: 320px;
+    height: 420px;
     overflow: hidden;
     background: #eaedf0;
     border-radius: var(--radius-lg);
@@ -1346,6 +1346,10 @@ body {
 
     .services-grid {
         grid-template-columns: 1fr;
+    }
+
+    .service-image-box {
+        height: 320px;
     }
 
     .about-features {
